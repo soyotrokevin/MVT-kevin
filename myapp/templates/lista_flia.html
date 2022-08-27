@@ -7,15 +7,32 @@
     <title>Mi Primer MVT - Kevin Hughes</title>
 
 <style>
-    h1 {text-align: center;}
+    h3 {text-align: center;}
     p {text-align: center;}
-    div {text-align: center;}
+    p {color: white;}
+    b {font-weight: bold;}
 </style>
 </head>
-<body>
-    <h1>Mi familia:</h1>
-    {% for familia in miapp %}
-    <p>{{familia.nombre}}</p>
+<body style="background-color:black;">
+    
+    <h3  style="color:white;">Mi familia:</h3><br>
+
+    <p><b>Nombre:</b></p>
+    {% for familiar in flia %}
+    <p>{{familiar.nombre}}</p>
+    {% endfor %}<br>
+
+    <p><b>Parentesco:</b></p>
+    {% for familiar in flia %}
+    <p>{{familiar.parentesco}}</p>
+    {% endfor %}<br>
+
+    <p><b>Fecha de Nacimiento:</b></p>
+    {% for familiar in flia %}
+    <p>{{familiar.fecha_nacimiento}}</p>
     {% endfor %}
+
+
+
 </body>
 </html>
